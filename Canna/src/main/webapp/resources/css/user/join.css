@@ -1,0 +1,114 @@
+@CHARSET "UTF-8";
+@IMPORT url("../reset.css");
+
+/*
+
+
+#004080 : 남색
+#d9d9d9 : 연한 회색
+
+*/
+
+nav, section, div, ul, li {
+	box-sizing:border-box;
+}
+
+@media only screen and (max-width:760px) {
+
+#wrap {
+	display: flex;
+	flex-flow: column nowrap;
+	min-width: 320px;
+	height: 100%;
+}
+.header {
+	display: flex;
+	flex-flow: column nowrap;
+	height: 45px;
+	border-bottom: 1px solid #000;
+	text-align: center;
+	font-size: 17px;
+	font-weight: bold;
+	line-height: 45px;
+	color: #ffffff;
+	background-color: #004080;
+}
+.header .nav-back {
+	position: absolute;
+	left: 10px;
+	top: 0;
+	font-size: 32px;
+	text-decoration: none;
+	color: #ffffff;
+}
+.logo {
+	margin: 20px auto;
+}
+.nav-join-category {
+	display: flex;
+}
+.nav-join-category > ul {
+	width: 100%;
+}
+.nav-join-category > ul > li {
+	float: left;
+	width: 50%;
+	height: 60px;
+	border: 1px solid #808080;
+	text-align: center;
+	line-height: 60px;
+	text-decoration: none;
+	font-size: 18px;
+}
+.skin-selected {
+	background-color: #426acd;
+	color: #fff;
+}
+.area-company {
+	display: none;
+}
+.area-user-title {
+	margin: 10px 10px 0;
+	font-size: 20px;
+}
+.area-user ul {
+	padding: 5px 10px;
+}
+.area-user li {
+	border: 1px solid #c0c0c0;
+	border-bottom: 0;
+}
+.area-user li:NTH-CHILD(7) {
+	border-bottom: 1px solid #c0c0c0;
+}
+.area-company li:NTH-CHILD(2), .area-personal li:NTH-CHILD(2) {
+	border-bottom: 1px solid #c0c0c0;
+}
+.area-user input {
+	width: 100%;
+	height: 34px;
+	border: 0;
+	text-indent: 10px;
+}
+.area-gender span {
+	padding: 0 10px;
+	color: #808080;
+	line-height: 34px;
+}
+.area-gender input {
+	width: 16px;
+}
+.area-submit {
+	margin: 5px 10px;
+}
+.area-submit > button {
+	width: 100%;
+	height: 40px;
+	color: #fff;
+	background-color: #000000;
+}
+	
+	
+	
+	
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+	<definition name="user-join" template="/WEB-INF/views/user/join.jsp">
+		<put-attribute name="title" value="프로젝트 칸나-회원가입"/>
+	</definition>
+</tiles-definitions>

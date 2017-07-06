@@ -61,7 +61,7 @@ $(document).ready(function() {
 			</div>
 			<div class="menu">
 				<div class="area-account">
-					<button class="btn btn-account" title="회원가입"><i class="fa fa-user-plus icon-account" aria-hidden="true"></i>회원가입</button>
+					<button class="btn btn-account" title="회원가입" onclick="location.href='/user/join'"><i class="fa fa-user-plus icon-account" aria-hidden="true"></i>회원가입</button>
 					<button class="btn btn-account" title="로그인"><i class="fa fa-sign-in icon-account" aria-hidden="true"></i>로그인</button>
 				</div>
 				<ul class="nav-shortcut">

@@ -9,7 +9,7 @@
 
 */
 
-nav, section, div {
+nav, section, div, ul, li {
 	box-sizing:border-box;
 }
 .btn {

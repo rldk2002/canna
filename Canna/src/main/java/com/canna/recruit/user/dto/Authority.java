@@ -3,11 +3,11 @@
  *	회원 권한
  *
  */
-package com.canna.recruit.dto;
+package com.canna.recruit.user.dto;
 
 public enum Authority {
-	NORMAL(0, "ROLE_NORMAL_USER"),
-	ENTERPRISE(1, "ROLE_ENTERPRISE_USER"),
+	PERSONAL(0, "ROLE_PERSONAL"),
+	COMPANY(1, "ROLE_COMPANY"),
 	ADMIN(2, "ROLE_ADMIN");
 	
 	private final int id;
@@ -28,8 +28,8 @@ public enum Authority {
 	
 	public static Authority valueOf(int id) {
 		switch(id) {
-			case 0: return NORMAL;
-			case 1: return ENTERPRISE;
+			case 0: return PERSONAL;
+			case 1: return COMPANY;
 			case 2: return ADMIN;
 			default: throw new AssertionError("unknown value : " + id);
 		}
