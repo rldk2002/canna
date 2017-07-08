@@ -1,8 +1,8 @@
-package com.canna.recruit.user.dto;
+package com.canna.recruit.user.domain;
 
 import org.joda.time.DateTime;
 
-public class Personal {
+public class User {
 	private String id;
 	private String password;
 	private String userName;
@@ -13,70 +13,107 @@ public class Personal {
 	private DateTime joinDate;
 	private String birthday;
 	private Gender gender;
+	private String companyName;
+	private String address;
 	
 	public String getCustomFormatTime() {
 		return joinDate.toString("yyyy-MM-dd HH:mm:ss");
 	}
-	
+
 	public String getId() {
 		return id;
 	}
+
 	public void setId(String id) {
 		this.id = id;
 	}
+
 	public String getPassword() {
 		return password;
 	}
+
 	public void setPassword(String password) {
 		this.password = password;
 	}
+
 	public String getUserName() {
 		return userName;
 	}
+
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
+
 	public String getNickName() {
 		return nickName;
 	}
+
 	public void setNickName(String nickName) {
 		this.nickName = nickName;
 	}
+
 	public String getEmail() {
 		return email;
 	}
+
 	public void setEmail(String email) {
 		this.email = email;
 	}
+
 	public String getTel() {
 		return tel;
 	}
+
 	public void setTel(String tel) {
 		this.tel = tel;
 	}
+
 	public Authority getAuthority() {
 		return authority;
 	}
+
 	public void setAuthority(Authority authority) {
 		this.authority = authority;
 	}
+
 	public DateTime getJoinDate() {
 		return joinDate;
 	}
+
 	public void setJoinDate(DateTime joinDate) {
 		this.joinDate = joinDate;
 	}
+
 	public String getBirthday() {
 		return birthday;
 	}
+
 	public void setBirthday(String birthday) {
 		this.birthday = birthday;
 	}
+
 	public Gender getGender() {
 		return gender;
 	}
+
 	public void setGender(Gender gender) {
 		this.gender = gender;
+	}
+
+	public String getCompanyName() {
+		return companyName;
+	}
+
+	public void setCompanyName(String companyName) {
+		this.companyName = companyName;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
 	}
 	
 }

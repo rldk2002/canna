@@ -2,7 +2,7 @@ package com.canna.recruit.propertyEditor;
 
 import java.beans.PropertyEditorSupport;
 
-import com.canna.recruit.user.dto.Authority;
+import com.canna.recruit.user.domain.Authority;
 
 public class AuthorityPropertyEditor extends PropertyEditorSupport {
 

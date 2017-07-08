@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration 
+    PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-config.dtd">
+ 
+<configuration>
+	<typeAliases>
+		<typeAlias type="com.canna.recruit.user.domain.User" alias="User"/>
+		<typeAlias type="com.canna.recruit.user.domain.Authority" alias="Authority"/>
+		<typeAlias type="com.canna.recruit.user.dao.UserDao" alias="UserDao"/>
+	</typeAliases>
+	
+	<typeHandlers>
+		<typeHandler handler="com.canna.recruit.mybatis.handler.DateTimeTypeHandler" javaType="org.joda.time.DateTime"/>
+		<typeHandler handler="com.canna.recruit.mybatis.handler.AuthorityTypeHandler" javaType="com.canna.recruit.user.domain.Authority"/>
+	</typeHandlers>
+		
+	<mappers>
+		<mapper resource="database/mybatis/mapper/user.xml"/>
+	</mappers>
+</configuration>

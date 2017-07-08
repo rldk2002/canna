@@ -1,4 +1,4 @@
-package com.canna.recruit.user.dto;
+package com.canna.recruit.user.domain;
 
 public enum Industy {
 	MANAGEMENT(0, "경영"),

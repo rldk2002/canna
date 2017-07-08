@@ -2,7 +2,7 @@ package com.canna.recruit.propertyEditor;
 
 import java.beans.PropertyEditorSupport;
 
-import com.canna.recruit.user.dto.Gender;
+import com.canna.recruit.user.domain.Gender;
 
 public class GenderPropertyEditor extends PropertyEditorSupport {
 

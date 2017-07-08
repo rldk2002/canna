@@ -1,4 +1,4 @@
-package com.canna.recruit.user.dto;
+package com.canna.recruit.user.domain;
 
 import org.joda.time.DateTime;
 

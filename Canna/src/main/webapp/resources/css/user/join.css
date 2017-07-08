@@ -68,13 +68,16 @@ nav, section, div, ul, li {
 	display: none;
 }
 .area-user-title {
-	margin: 10px 10px 0;
-	font-size: 20px;
+	margin: 20px 10px 5px;
+	font-size: 30px;
+	font-weight: bold;
 }
 .area-user ul {
 	padding: 5px 10px;
 }
 .area-user li {
+	display: flex;
+	padding-left: 14px;
 	border: 1px solid #c0c0c0;
 	border-bottom: 0;
 }
@@ -84,19 +87,30 @@ nav, section, div, ul, li {
 .area-company li:NTH-CHILD(2), .area-personal li:NTH-CHILD(2) {
 	border-bottom: 1px solid #c0c0c0;
 }
+.area-user li.must {
+	background: url("/images/bul_must.png") no-repeat 5px 15px;
+}
+.must-info {
+	display: none;
+}
 .area-user input {
 	width: 100%;
 	height: 34px;
 	border: 0;
 	text-indent: 10px;
 }
+.area-gender {
+	display: flex;
+	line-height: 34px;
+	font-size: 14px;
+}
 .area-gender span {
 	padding: 0 10px;
-	color: #808080;
-	line-height: 34px;
+	color: #8f8f8f;
 }
 .area-gender input {
 	width: 16px;
+	height: 32px;
 }
 .area-submit {
 	margin: 5px 10px;
@@ -108,7 +122,106 @@ nav, section, div, ul, li {
 	background-color: #000000;
 }
 	
-	
-	
-	
 }
+
+@media only screen and (min-width:760px) {
+	
+#wrap {
+	display: flex;
+	flex-flow: column nowrap;
+	width: 620px;
+	height: 100%;
+	margin: 0 auto;
+}
+.header {
+	display: none;
+}
+.logo {
+	padding: 43px 0 32px;
+	text-align: center;
+}
+.nav-join-category {
+	display: flex;
+	cursor: pointer;
+}
+.nav-join-category > ul {
+	width: 100%;
+}
+.nav-join-category > ul > li {
+	float: left;
+	width: 50%;
+	height: 60px;
+	border: 1px solid #808080;
+	text-align: center;
+	line-height: 60px;
+	text-decoration: none;
+	font-size: 18px;
+}
+.skin-selected {
+	background-color: #426acd;
+	color: #fff;
+}
+.area-company {
+	display: none;
+}
+.area-user-title {
+	margin: 20px 10px 5px;
+	font-size: 30px;
+	font-weight: bold;
+}
+.area-user ul {
+	padding: 5px 10px;
+}
+.area-user li {
+	display: flex;
+	padding-left: 14px;
+	border: 1px solid #c0c0c0;
+	border-bottom: 0;
+}
+.area-user li:NTH-CHILD(7) {
+	border-bottom: 1px solid #c0c0c0;
+}
+.area-company li:NTH-CHILD(2), .area-personal li:NTH-CHILD(2) {
+	border-bottom: 1px solid #c0c0c0;
+}
+.area-user li.must {
+	background: url("/images/bul_must.png") no-repeat 5px 15px;
+}
+.must-info {
+	width: 50%;
+	padding-right: 5px;	
+	text-align: right;
+	line-height: 34px;
+	font-size: 12px;
+}
+.area-user input {
+	width: 50%;
+	height: 34px;
+	border: 0;
+	text-indent: 10px;
+}
+.area-gender {
+	display: flex;
+	line-height: 34px;
+	font-size: 14px;
+}
+.area-gender span {
+	padding: 0 10px;
+	color: #8f8f8f;
+}
+.area-gender input {
+	width: 16px;
+	height: 32px;
+}
+.area-submit {
+	margin: 5px 10px;
+}
+.area-submit > button {
+	width: 100%;
+	height: 40px;
+	color: #fff;
+	background-color: #000000;
+}	
+}
+	
+	

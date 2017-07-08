@@ -3,7 +3,7 @@
  *	회원 권한
  *
  */
-package com.canna.recruit.user.dto;
+package com.canna.recruit.user.domain;
 
 public enum Authority {
 	PERSONAL(0, "ROLE_PERSONAL"),

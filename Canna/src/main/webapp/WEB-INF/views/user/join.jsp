@@ -41,7 +41,7 @@ $(document).ready(function() {
 	</header>
 	
 	<h1 class="logo">
-		<img src="/images/logo.png" width="315px" height="84px" title="칸나 프로젝트" alt="칸나 프로젝트, 모든 채용정보를  알아보세요">
+		<a href="/" title="칸나 프로젝트"><img src="/images/logo.png" width="315px" height="84px" title="칸나 프로젝트" alt="칸나 프로젝트, 모든 채용정보를  알아보세요"></a>
 	</h1>
 	
 	<div id="container">
@@ -57,14 +57,33 @@ $(document).ready(function() {
 				<h3 class="area-user-title">가입정보입력</h3>
 				<div class="area-common">
 					<ul>
-						<li><form:input path="id" placeholder="아이디"/></li>
-						<li><form:input path="password" placeholder="비밀번호"/></li>
-						<li><input type="password" id="password2" placeholder="비밀번호 확인"/></li>
-						<li><form:input path="userName" placeholder="이름"/></li>
-						<li><form:input path="nickName" placeholder="별명"/></li>
-						<li><form:input path="email" placeholder="이메일"/></li>
-						<li><form:input path="tel" placeholder="연락처"/></li>
-						<li style="display: none;">
+						<li class="must">
+							<form:input path="id" placeholder="아이디" maxlength="20"/>
+							<div class="must-info">4~20자의 영문,숫자만 사용가능합니다.</div>
+						</li>
+						<li class="must">
+							<form:password path="password" placeholder="비밀번호" maxlength="30"/>
+							<div class="must-info">8~30자의 영문,숫자,특수문자를 조합하세요.</div>
+						</li>
+						<li class="must">
+							<input type="password" id="password2" placeholder="비밀번호 확인" maxlength="30"/>
+						</li>
+						<li class="must">
+							<form:input path="userName" placeholder="이름" maxlength="20"/>
+							<div class="must-info">이름에는 특수문자를 사용할수 없습니다.</div>
+						</li>
+						<li class="must">
+							<form:input path="nickName" placeholder="별명" maxlength="10"/>
+						</li>
+						<li class="must">
+							<form:input path="email" placeholder="이메일" maxlength="40"/>
+							<div class="must-info">유효한 이메일 주소를 입력해주세요</div>
+						</li>
+						<li class="must">
+							<form:input path="tel" placeholder="연락처" maxlength="12"/>
+							<div class="must-info">'-'을 제외하고 숫자만 입력해주세요</div>
+						</li>
+						<li class="must" style="display: none;">
 							<form:radiobutton path="authority" label="개인" value="0" checked="checked"/>
 							<form:radiobutton path="authority" label="기업" value="1"/>
 						</li>
@@ -72,8 +91,11 @@ $(document).ready(function() {
 				</div>
 				<div class="area-personal">
 					<ul>
-						<li><form:input path="birthday" placeholder="생년월일"/></li>
-						<li class="area-gender">
+						<li class="must">
+							<form:input path="birthday" placeholder="생년월일"/>
+							<div class="must-info">예시) 20170709</div>
+						</li>
+						<li class="must area-gender">
 							<span>성별</span>
 							<form:radiobutton path="gender" label="남" value="0"/>
 							<form:radiobutton path="gender" label="여" value="1"/>
@@ -82,12 +104,12 @@ $(document).ready(function() {
 				</div>
 				<div class="area-company">
 					<ul>
-						<li><form:input path="companyName" placeholder="회사명"/></li>
-						<li><form:input path="address" placeholder="주소지"/></li>
+						<li class="must"><form:input path="companyName" placeholder="회사명"/></li>
+						<li class="must"><form:input path="address" placeholder="주소지"/></li>
 					</ul>
 				</div>
 				<div class="area-submit">
-					<form:button>전송</form:button>
+					<form:button>가입하기</form:button>
 				</div>
 			</form:form>
 		</div>

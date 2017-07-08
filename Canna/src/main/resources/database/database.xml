@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd" >
+<properties>
+    <entry key="db.driverClass">com.microsoft.sqlserver.jdbc.SQLServerDriver</entry>
+    <entry key="db.url">jdbc:sqlserver://localhost:1433;databaseName=Canna</entry>
+    <entry key="db.username">canna</entry>
+    <entry key="db.password">canna</entry>
+</properties>

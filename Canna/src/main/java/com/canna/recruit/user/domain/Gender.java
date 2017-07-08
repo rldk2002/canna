@@ -1,4 +1,4 @@
-package com.canna.recruit.user.dto;
+package com.canna.recruit.user.domain;
 
 public enum Gender {
 	M(0, "남"), W(1, "여");
