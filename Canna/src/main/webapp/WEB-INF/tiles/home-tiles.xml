@@ -3,7 +3,20 @@
         "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
         "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
 <tiles-definitions>
-	<definition name="main" template="/WEB-INF/views/main/main.jsp">
-		<put-attribute name="title" value="프로젝트 칸나"/>
+	<definition name="layout-tiles" template="/WEB-INF/views/layout/layout-tiles.jsp">
+		<put-attribute name="header" value="/WEB-INF/views/layout/empty.jsp"/>
+		<put-attribute name="container" value="/WEB-INF/views/layout/empty.jsp"/>
+		<put-attribute name="footer" value="/WEB-INF/views/layout/empty.jsp"/>
 	</definition>
+	
+	<definition name="/template-main/**" extends="layout-tiles">
+		<put-attribute name="header" value="/WEB-INF/views/header/header-main.jsp"/>
+		<put-attribute name="container" value="/WEB-INF/views/{1}.jsp"/>
+		<put-attribute name="footer" value="/WEB-INF/views/footer/footer-main.jsp"/>
+	</definition>
+	
+	<definition name="/template-user/**" extends="layout-tiles">
+		<put-attribute name="header" value="/WEB-INF/views/header/header-user.jsp"/>
+		<put-attribute name="container" value="/WEB-INF/views/{1}.jsp"/>
+	</definition> 
 </tiles-definitions>

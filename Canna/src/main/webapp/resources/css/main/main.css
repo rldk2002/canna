@@ -1,286 +1,33 @@
 @CHARSET "UTF-8";
-@IMPORT url("../reset.css");
 @import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
-/*
 
-
-#004080 : 남색
-#d9d9d9 : 연한 회색
-
-*/
-
-nav, section, div, ul, li {
-	box-sizing:border-box;
-}
-.btn {
-	border: 0;
-	outline: none;
-}
-
-@media only screen and (max-width:320px) {
-
-.section-search .btn-search {
-	left: 275px;
-}
-
-}
-
-/* 모바일 */
 @media only screen and (max-width:760px) {
-	
-#wrap {
-	display: flex;
-	flex-flow: column nowrap;
-	width: 100%;
-	height: 100%;
-}
-.gnb {
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: space-between;
-	min-width: 320px;
-	height: 64px;
-}
-.gnb .btn-open-menu {
-	width: 32px;
-	height: 32px;
-	margin: 10px;
-	background-color: #004080;
-	font-size: 22px;
-	color: #fff;
-}
-.gnb .bg-menu {
-	display: none;
-	position: absolute;
-	top: 0;
-	left: 0;
-	background-color:rgba(128,128,128,0.7);
-	z-index: 100;
-}
-.gnb .bg-menu .btn-close-menu {
-	position: absolute;
-	top: 10px;
-	left: 10px;
-	font-size: 28px;
-}
-.gnb .menu {
-	display: none;
-	position: absolute;
-	right: -260px;
-	background-color: #fff;
-	z-index: 101;
-}
-.gnb .menu .area-account {
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: space-around;
-	align-items: center;
-	height: 80px;
-	background-color: #004080;
-}
-.gnb .menu .area-account .btn-account {
-	width: 110px;
-	height: 40px;
-	border: 2px solid #fff;
-	border-radius: 15px;
-	background-color: #004080;
-	font-size: 14px;
-	color: #fff;
-}
-.gnb .menu .area-account .btn-account .icon-account {
-	margin-right: 10px;
-	font-size: 18px;
-}
-.gnb .menu .nav-shortcut {
-	display: flex;
-	flex-flow: column nowrap;
-	padding: 20px 0;
-}
-.gnb .menu .nav-shortcut > li > a {
-	display: block;
-	height: 40px;
-	padding-left: 30px;
-	line-height: 40px;
-	text-decoration: none;
-	color: #000;
-}
-.gnb .menu .nav-shortcut .icon-shortcut {
-	margin-right: 20px;
-	font-size: 18px;
-	color: #004080;
-}
-.section-search {
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: center;
-	align-items: center;
-	min-width: 320px;
-	height: 60px;
-	padding: 10px 12px;
-	background-color: #004080;
-}
-.section-search .logo {
-	display: none;
-}
-.section-search .bg-searchbox {
-	width: 100%;
-	height: 100%;
-	padding-right: 30px;
-	background-color: #fff;
-}
-.section-search .input-txt-search {
-	width: 100%;
-	height: 40px;
-	border: none;
-	text-indent: 6px;
-	outline: none;
-}
-.section-search .btn-search {
-	position:absolute;
-	top: 75px;
-	right: 14px;
-	width: 30px;
-	height: 38px;
-	background-color: #fff;
-	font-size: 20px;
-	color: #808080;
-}
-.section-slider-ad {}
-.section-popular-recruit {
+
+.section-recruit {
 	display: flex;
 	flex-flow: column nowrap;
 	background-color: #d9d9d9;
 }
-.section-popular-recruit .title {
+.section-recruit__title {
 	display: flex;
 	justify-content: center;
 	padding: 20px 0;
 	font-size: 32px;
 	font-family: 'Hanna', serif;
 	color: #004080;
-}
-#footer {
-	padding-top: 40px;
-	background-color: #d9d9d9;
-}
-.nav-guide {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
-}
-.nav-guide > li > a {
-	text-decoration: none;
-	color: #000;
-}
-.area-info {
-	padding-top: 10px;
-	padding-bottom: 40px;
-	text-align: center;
-}
-
+}	
+	
 
 }
 
-/* PC */
 @media only screen and (min-width:760px) {
 
-.gnb {
-	display: flex;
-	flex-flow: column nowrap;
-}
-.gnb .logo {
-	display: none;
-}
-.gnb .btn-open-menu {
-	display: none;
-}
-.gnb .bg-menu {
-	display: none;
-}
-.gnb .menu {
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: space-between;
-	height: 64px;
-	background-color: #004080;
-	user-select: none;
-}
-.gnb .menu .nav-shortcut {
-	order: 1;
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: space-between;
-	align-items: center;
-}
-.gnb .menu .nav-shortcut > li {
-	padding: 0 15px;
-}
-.gnb .menu .nav-shortcut > li > a {
-	color: #fff;
-	text-decoration: none;
-}
-.gnb .menu .nav-shortcut .icon-shortcut {
-	display: none;
-}
-.gnb .menu .area-account {
-	order: 2;
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: space-between;
-	align-items: center;
-	background-color: #0080ff;
-}
-.gnb .menu .area-account .btn-account {
-	padding: 0 20px;
-	background-color: #0080ff;
-	color: #fff;
-}
-.gnb .menu .area-account .btn-account .icon-account {
-	display: none;
-}
-.section-search {
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: center;
-	align-items: center;
-	height: 100px;
-}
-.section-search .logo {
-	position: relative;
-	right: 30px;
-}
-.section-search .bg-searchbox {
-	display: flex;
-	flex-flow: row nowrap;
-	align-items: center;
-	width: 406px;
-	height: 48px;
-	background-color: #004080;
-}
-.section-search .input-txt-search {
-	position: relative;
-	left: 4px;
-	width: 360px;
-	height: 40px;
-	border: none;
-	text-indent: 6px;
-	outline: none;
-}
-.section-search .btn-search {
-	position: relative;
-	left: 6px;
-	width: 36px;
-	height: 38px;
-	background-color: #004080;
-	font-size: 20px;
-	color: #fff;
-}
-.section-popular-recruit {
+.section-recruit {
 	display: flex;
 	flex-flow: column nowrap;
 	background-color: #d9d9d9;
 }
-.section-popular-recruit .title {
+.section-recruit__title {
 	display: flex;
 	justify-content: center;
 	padding: 20px 0;
@@ -288,24 +35,5 @@ nav, section, div, ul, li {
 	font-family: 'Hanna', serif;
 	color: #004080;
 }
-#footer {
-	padding-top: 40px;
-	background-color: #d9d9d9;
-}
-.nav-guide {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
-}
-.nav-guide > li > a {
-	text-decoration: none;
-	color: #000;
-}
-.area-info {
-	padding-top: 10px;
-	padding-bottom: 40px;
-	text-align: center;
-}
 
-	
 }

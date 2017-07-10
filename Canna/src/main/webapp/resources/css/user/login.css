@@ -1,0 +1,33 @@
+@CHARSET "UTF-8";
+@IMPORT url("../reset.css");
+
+
+nav, section, div, ul, li {
+	box-sizing:border-box;
+}
+
+@media only screen and (max-width:760px) {
+
+#wrap {
+	display: flex;
+	flex-flow: column nowrap;
+	min-width: 320px;
+	height: 100%;
+}
+
+
+}
+
+@media only screen and (min-width:760px) {
+
+#wrap {
+	display: flex;
+	flex-flow: column nowrap;
+	width: 620px;
+	height: 100%;
+	margin: 0 auto;
+}
+
+}
+	
+	

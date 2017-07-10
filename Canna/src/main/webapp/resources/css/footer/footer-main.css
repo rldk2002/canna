@@ -1,0 +1,20 @@
+@CHARSET "UTF-8";
+
+.footer__wrap {
+	padding-top: 40px;
+	background-color: #d9d9d9;
+}
+.footer__nav-guide {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+.footer__nav-guide > li > a {
+	text-decoration: none;
+	color: #000;
+}
+.footer__area-info {
+	padding-top: 10px;
+	padding-bottom: 40px;
+	text-align: center;
+}

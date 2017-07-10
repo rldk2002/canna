@@ -1,17 +1,11 @@
 @CHARSET "UTF-8";
-@IMPORT url("../reset.css");
 
 /*
-
 
 #004080 : 남색
 #d9d9d9 : 연한 회색
 
 */
-
-nav, section, div, ul, li {
-	box-sizing:border-box;
-}
 
 @media only screen and (max-width:760px) {
 
@@ -21,36 +15,13 @@ nav, section, div, ul, li {
 	min-width: 320px;
 	height: 100%;
 }
-.header {
-	display: flex;
-	flex-flow: column nowrap;
-	height: 45px;
-	border-bottom: 1px solid #000;
-	text-align: center;
-	font-size: 17px;
-	font-weight: bold;
-	line-height: 45px;
-	color: #ffffff;
-	background-color: #004080;
-}
-.header .nav-back {
-	position: absolute;
-	left: 10px;
-	top: 0;
-	font-size: 32px;
-	text-decoration: none;
-	color: #ffffff;
-}
-.logo {
-	margin: 20px auto;
-}
-.nav-join-category {
+.nav-category--join {
 	display: flex;
 }
-.nav-join-category > ul {
+.nav-category--join > ul {
 	width: 100%;
 }
-.nav-join-category > ul > li {
+.nav-category--join > ul > li {
 	float: left;
 	width: 50%;
 	height: 60px;
@@ -60,40 +31,40 @@ nav, section, div, ul, li {
 	text-decoration: none;
 	font-size: 18px;
 }
-.skin-selected {
+.nav-category--selected {
 	background-color: #426acd;
 	color: #fff;
 }
-.area-company {
+.section-user__company {
 	display: none;
 }
-.area-user-title {
+.section-user__title {
 	margin: 20px 10px 5px;
 	font-size: 30px;
 	font-weight: bold;
 }
-.area-user ul {
+.section-user ul {
 	padding: 5px 10px;
 }
-.area-user li {
+.section-user li {
 	display: flex;
 	padding-left: 14px;
 	border: 1px solid #c0c0c0;
 	border-bottom: 0;
 }
-.area-user li:NTH-CHILD(7) {
+.section-user li:NTH-CHILD(7) {
 	border-bottom: 1px solid #c0c0c0;
 }
-.area-company li:NTH-CHILD(2), .area-personal li:NTH-CHILD(2) {
+.section-user__company li:NTH-CHILD(2), .section-user__personal li:NTH-CHILD(2) {
 	border-bottom: 1px solid #c0c0c0;
 }
-.area-user li.must {
+.section-user li.must {
 	background: url("/images/bul_must.png") no-repeat 5px 15px;
 }
 .must-info {
 	display: none;
 }
-.area-user input {
+.section-user input {
 	width: 100%;
 	height: 34px;
 	border: 0;
@@ -112,10 +83,10 @@ nav, section, div, ul, li {
 	width: 16px;
 	height: 32px;
 }
-.area-submit {
+.section-user__submit {
 	margin: 5px 10px;
 }
-.area-submit > button {
+.section-user__submit > button {
 	width: 100%;
 	height: 40px;
 	color: #fff;
@@ -133,21 +104,14 @@ nav, section, div, ul, li {
 	height: 100%;
 	margin: 0 auto;
 }
-.header {
-	display: none;
-}
-.logo {
-	padding: 43px 0 32px;
-	text-align: center;
-}
-.nav-join-category {
+.nav-category--join {
 	display: flex;
 	cursor: pointer;
 }
-.nav-join-category > ul {
+.nav-category--join > ul {
 	width: 100%;
 }
-.nav-join-category > ul > li {
+.nav-category--join > ul > li {
 	float: left;
 	width: 50%;
 	height: 60px;
@@ -157,34 +121,34 @@ nav, section, div, ul, li {
 	text-decoration: none;
 	font-size: 18px;
 }
-.skin-selected {
+.nav-category--selected {
 	background-color: #426acd;
 	color: #fff;
 }
-.area-company {
+.section-user__company {
 	display: none;
 }
-.area-user-title {
+.section-user__title {
 	margin: 20px 10px 5px;
 	font-size: 30px;
 	font-weight: bold;
 }
-.area-user ul {
+.section-user ul {
 	padding: 5px 10px;
 }
-.area-user li {
+.section-user li {
 	display: flex;
 	padding-left: 14px;
 	border: 1px solid #c0c0c0;
 	border-bottom: 0;
 }
-.area-user li:NTH-CHILD(7) {
+.section-user li:NTH-CHILD(7) {
 	border-bottom: 1px solid #c0c0c0;
 }
-.area-company li:NTH-CHILD(2), .area-personal li:NTH-CHILD(2) {
+.section-user__company li:NTH-CHILD(2), .section-user__personal li:NTH-CHILD(2) {
 	border-bottom: 1px solid #c0c0c0;
 }
-.area-user li.must {
+.section-user li.must {
 	background: url("/images/bul_must.png") no-repeat 5px 15px;
 }
 .must-info {
@@ -194,7 +158,7 @@ nav, section, div, ul, li {
 	line-height: 34px;
 	font-size: 12px;
 }
-.area-user input {
+.section-user input {
 	width: 50%;
 	height: 34px;
 	border: 0;
@@ -213,10 +177,10 @@ nav, section, div, ul, li {
 	width: 16px;
 	height: 32px;
 }
-.area-submit {
+.section-user__submit {
 	margin: 5px 10px;
 }
-.area-submit > button {
+.section-user__submit > button {
 	width: 100%;
 	height: 40px;
 	color: #fff;

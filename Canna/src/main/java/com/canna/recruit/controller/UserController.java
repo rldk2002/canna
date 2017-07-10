@@ -4,9 +4,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.PropertySource;
-import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -35,10 +34,11 @@ public class UserController {
 	}
 	
 	@RequestMapping(value = "/join", method = RequestMethod.GET)
-	public String joinPage(@ModelAttribute("user") User user) {
-		logger.info("프로젝트 칸나-회원가입 페이지");
+	public String joinPage(@ModelAttribute("user") User user, Model model) {
 		
-		return "user-join";
+		model.addAttribute("title", "프로젝트 칸나-회원가입");
+		
+		return "/template-user/user/join";
 	}
 	
 	@RequestMapping(value = "/join", method = RequestMethod.POST)
@@ -49,5 +49,12 @@ public class UserController {
 		return "user-join";
 	}
 	
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
+	public String login(Model model) {
+		
+		model.addAttribute("프로젝트 칸나-로그인");
+		
+		return "/template-user/user/login";
+	}
 	
 }

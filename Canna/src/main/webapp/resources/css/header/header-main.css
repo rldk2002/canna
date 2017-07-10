@@ -1,0 +1,226 @@
+@CHARSET "UTF-8";
+
+@media only screen and (max-width:320px) {
+
+.gnb__searchBox-btn {
+	left: 275px;
+}
+
+}
+
+
+@media only screen and (max-width:760px) {
+
+.gnb {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	min-width: 320px;
+	height: 64px;
+}
+.gnb__menu--open {
+	width: 32px;
+	height: 32px;
+	margin: 10px;
+	border: 0;
+	background-color: #004080;
+	font-size: 22px;
+	color: #fff;
+	outline: none;
+}
+.gnb__menu--bg {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color:rgba(128,128,128,0.7);
+	z-index: 100;
+}
+.gnb__menu--close {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	font-size: 28px;
+}
+.gnb__menu {
+	display: none;
+	position: absolute;
+	right: -260px;
+	background-color: #fff;
+	z-index: 101;
+}
+.gnb__area-account {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+	align-items: center;
+	height: 80px;
+	background-color: #004080;
+}
+.gnb__btn-account {
+	width: 110px;
+	height: 40px;
+	border: 2px solid #fff;
+	border-radius: 15px;
+	background-color: #004080;
+	font-size: 14px;
+	color: #fff;
+}
+.gnb__area-account .gnb__icon--visible {
+	margin-right: 10px;
+	font-size: 18px;
+}
+.gnb__nav-shortcut {
+	display: flex;
+	flex-flow: column nowrap;
+	padding: 20px 0;
+}
+.gnb__nav-shortcut > li > a {
+	display: block;
+	height: 40px;
+	padding-left: 30px;
+	line-height: 40px;
+	text-decoration: none;
+	color: #000;
+}
+.gnb__nav-shortcut .gnb__icon--visible {
+	margin-right: 20px;
+	font-size: 18px;
+	color: #004080;
+}
+.gnb__search-section {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	min-width: 320px;
+	height: 60px;
+	padding: 10px 12px;
+	background-color: #004080;
+}
+.gnb__search-section .gnb__logo {
+	display: none;
+}
+.gnb__searchBox--bg {
+	width: 100%;
+	height: 100%;
+	padding-right: 30px;
+	background-color: #fff;
+}
+.gnb__searchBox-input {
+	width: 100%;
+	height: 40px;
+	border: none;
+	text-indent: 6px;
+	outline: none;
+}
+.gnb__searchBox-btn {
+	position:absolute;
+	top: 75px;
+	right: 14px;
+	width: 30px;
+	height: 38px;
+	border: 0;
+	background-color: #fff;
+	font-size: 20px;
+	color: #808080;
+	outline: none;
+}
+
+
+}
+
+@media only screen and (min-width:760px) {
+
+.gnb {
+	display: flex;
+	flex-flow: column nowrap;
+}
+.gnb__logo,
+.gnb__menu--open,
+.gnb__menu--bg {
+	display: none;
+}
+.gnb__menu {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	height: 64px;
+	background-color: #004080;
+	user-select: none;
+}
+.gnb__area-account {
+	order: 2;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #0080ff;
+}
+.gnb__btn-account {
+	padding: 0 20px;
+	border: 0;
+	background-color: #0080ff;
+	color: #fff;
+	outline: none;
+}
+.gnb__nav-shortcut {
+	order: 1;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+}
+.gnb__nav-shortcut > li {
+	padding: 0 15px;
+}
+.gnb__nav-shortcut > li > a {
+	color: #fff;
+	text-decoration: none;
+}
+.gnb__area-account .gnb__icon--visible,
+.gnb__nav-shortcut .gnb__icon--visible {
+	display: none;
+}
+.gnb__search-section {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	height: 100px;
+}
+.gnb__search-section .gnb__logo {
+	display: block;
+	position: relative;
+	right: 30px;
+}
+.gnb__searchBox--bg {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	width: 406px;
+	height: 48px;
+	background-color: #004080;
+}
+.gnb__searchBox-input {
+	position: relative;
+	left: 4px;
+	width: 360px;
+	height: 40px;
+	border: none;
+	text-indent: 6px;
+	outline: none;
+}
+.gnb__searchBox-btn {
+	position: relative;
+	left: 6px;
+	width: 36px;
+	height: 38px;
+	border: 0;
+	background-color: #004080;
+	font-size: 20px;
+	color: #fff;
+	outline: none;
+}
+
+}

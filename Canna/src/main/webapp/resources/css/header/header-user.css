@@ -1,0 +1,45 @@
+@CHARSET "UTF-8";
+
+@media only screen and (max-width:760px) {
+
+.header {
+	display: flex;
+	flex-flow: column nowrap;
+	border-bottom: 1px solid #000;
+}
+.header__title {
+	height: 45px;
+	text-align: center;
+	font-size: 17px;
+	font-weight: bold;
+	line-height: 45px;
+	color: #ffffff;
+	background-color: #004080;
+}
+.header__link--back {
+	position: absolute;
+	left: 10px;
+	top: 0;
+	font-size: 32px;
+	text-decoration: none;
+	color: #ffffff;
+}
+.header__logo {
+	margin: 20px auto;
+}
+
+}
+
+@media only screen and (min-width:760px) {
+
+.header__title,
+.header__link--back {
+	display: none;
+}
+.header__logo {
+	display: block;
+	padding: 43px 0 32px;
+	text-align: center;
+}
+
+}

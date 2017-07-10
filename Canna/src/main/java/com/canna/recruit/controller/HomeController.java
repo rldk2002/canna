@@ -17,9 +17,10 @@ public class HomeController {
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Model model) {
-		logger.info("프로젝트 칸나-메인 페이지");
 		
-		return "main";
+		model.addAttribute("title", "프로젝트 칸나");
+		
+		return "/template-main/main/main";
 	}
 	
 }
