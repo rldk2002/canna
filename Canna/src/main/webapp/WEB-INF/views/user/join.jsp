@@ -37,9 +37,9 @@ $(document).ready(function() {
 </nav>
 
 <section class="section-user">
-	<form:form modelAttribute="user">
+	<form:form modelAttribute="personal" method="post" action="/user/join/personal" cssClass="section-user__personal">
 		<h3 class="section-user__title">가입정보입력</h3>
-		<div class="section-user__common">
+		<div class="section-user__input">
 			<ul>
 				<li class="must">
 					<form:input path="id" placeholder="아이디" maxlength="20"/>
@@ -68,12 +68,9 @@ $(document).ready(function() {
 					<div class="must-info">'-'을 제외하고 숫자만 입력해주세요</div>
 				</li>
 				<li class="must" style="display: none;">
-					<form:radiobutton path="authority" label="개인" value="0" checked="checked"/>
-					<form:radiobutton path="authority" label="기업" value="1"/>
+					<form:hidden path="authority" value="0"/>
 				</li>
 			</ul>
-		</div>
-		<div class="section-user__personal">
 			<ul>
 				<li class="must">
 					<form:input path="birthday" placeholder="생년월일"/>
@@ -86,7 +83,44 @@ $(document).ready(function() {
 				</li>
 			</ul>
 		</div>
-		<div class="section-user__company">
+		<div class="section-user__submit">
+			<form:button>가입하기</form:button>
+		</div>
+	</form:form>
+	<form:form modelAttribute="company" method="post" action="/user/join/company" cssClass="section-user__company">
+		<h3 class="section-user__title">가입정보입력</h3>
+		<div class="section-user__input">
+			<ul>
+				<li class="must">
+					<form:input path="id" placeholder="아이디" maxlength="20"/>
+					<div class="must-info">4~20자의 영문,숫자만 사용가능합니다.</div>
+				</li>
+				<li class="must">
+					<form:password path="password" placeholder="비밀번호" maxlength="30"/>
+					<div class="must-info">8~30자의 영문,숫자,특수문자를 조합하세요.</div>
+				</li>
+				<li class="must">
+					<input type="password" id="password2" placeholder="비밀번호 확인" maxlength="30"/>
+				</li>
+				<li class="must">
+					<form:input path="userName" placeholder="이름" maxlength="20"/>
+					<div class="must-info">이름에는 특수문자를 사용할수 없습니다.</div>
+				</li>
+				<li class="must">
+					<form:input path="nickName" placeholder="별명" maxlength="10"/>
+				</li>
+				<li class="must">
+					<form:input path="email" placeholder="이메일" maxlength="40"/>
+					<div class="must-info">유효한 이메일 주소를 입력해주세요</div>
+				</li>
+				<li class="must">
+					<form:input path="tel" placeholder="연락처" maxlength="12"/>
+					<div class="must-info">'-'을 제외하고 숫자만 입력해주세요</div>
+				</li>
+				<li class="must" style="display: none;">
+					<form:hidden path="authority" value="1"/>
+				</li>
+			</ul>
 			<ul>
 				<li class="must"><form:input path="companyName" placeholder="회사명"/></li>
 				<li class="must"><form:input path="address" placeholder="주소지"/></li>

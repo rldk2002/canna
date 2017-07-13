@@ -2,10 +2,6 @@
 @IMPORT url("../reset.css");
 
 
-nav, section, div, ul, li {
-	box-sizing:border-box;
-}
-
 @media only screen and (max-width:760px) {
 
 #wrap {
@@ -14,18 +10,128 @@ nav, section, div, ul, li {
 	min-width: 320px;
 	height: 100%;
 }
-
+.section-login {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	padding: 10px;
+}
+.section-login__title {
+	width: 100%;
+	margin-bottom: 20px;
+	text-align: left;
+	font-size: 22px;
+	font-weight: bold;
+}
+.section-login__form {
+	width: 100%;
+}
+.section-login__form > li {
+	width: 99%;
+	padding: 4px 0;
+}
+.section-login__form > li > input {
+	width: 100%;
+	height: 38px;
+	border: 1px solid;
+	border-radius: 3px;
+	text-indent: 10px;
+}
+.section-login__submit {
+	width: 100%;
+	height: 40px;
+	margin: 10px 0;
+	border: 0;
+	border-radius: 3px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #fff;
+	background-color: #33c24d;
+	outline: none;
+}
+.area-user {
+	text-align: center;
+}
+.area-user > span > a {
+	color: #008000;
+	font-weight: bold;
+	text-decoration: none;
+}
+.area-user > span > a:HOVER {
+	text-decoration: underline;
+}
 
 }
 
 @media only screen and (min-width:760px) {
-
+body {
+	background-color: #f1f1f1;
+}	
 #wrap {
 	display: flex;
 	flex-flow: column nowrap;
 	width: 620px;
 	height: 100%;
 	margin: 0 auto;
+}
+.section-login {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	width: 360px;
+	padding: 20px 40px 10px;
+	margin: 0 auto;
+	background-color: #fff;
+}
+.section-login__title {
+	width: 100%;
+	margin-bottom: 20px;
+	text-align: left;
+	font-size: 22px;
+	margin-bottom: 20px;
+	font-weight: bold;
+}
+.section-login__form {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+}
+.section-login__form > li {
+	width: 280px;
+	padding: 4px 0;
+}
+.section-login__form > li > input {
+	width: 100%;
+	height: 38px;
+	border: 1px solid;
+	border-radius: 3px;
+	text-indent: 10px;
+}
+.section-login__submit {
+	width: 280px;
+	height: 40px;
+	margin: 10px 0;
+	border: 0;
+	border-radius: 3px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #fff;
+	background-color: #33c24d;
+	outline: none;
+}
+.area-user {
+	margin: 0 130px;
+	padding-bottom: 20px;
+	text-align: center;
+	background-color: #fff;
+}
+.area-user > span > a {
+	color: #008000;
+	font-weight: bold;
+	text-decoration: none;
+}
+.area-user > span > a:HOVER {
+	text-decoration: underline;
 }
 
 }

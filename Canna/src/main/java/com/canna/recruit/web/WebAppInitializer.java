@@ -21,7 +21,7 @@ public class WebAppInitializer implements WebApplicationInitializer {
 	public void onStartup(ServletContext servletContext) throws ServletException {
 		// 루트 웹 컨텍스트 등록
 		AnnotationConfigWebApplicationContext rootContext = new AnnotationConfigWebApplicationContext();
-		rootContext.scan("com.canna.recruit.config");
+		rootContext.scan("com.canna.recruit");
 		ServletContextListener listener = new ContextLoaderListener(rootContext);
 		servletContext.addListener(listener);
 		

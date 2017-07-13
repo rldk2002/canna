@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
 <link rel="stylesheet" href="/css/header/header-main.css">
 <script type="text/javascript">
 $(document).ready(function() {
@@ -34,8 +35,13 @@ $(document).ready(function() {
 	</div>
 	<section class="gnb__menu">
 		<div class="gnb__area-account">
-			<button class="gnb__btn-account" title="회원가입" onclick="location.href='/user/join'"><i class="fa fa-user-plus gnb__icon--visible" aria-hidden="true"></i>회원가입</button>
-			<button class="gnb__btn-account" title="로그인" onclick="location.href='/user/login'"><i class="fa fa-sign-in gnb__icon--visible" aria-hidden="true"></i>로그인</button>
+			<sec:authorize access="isAnonymous()">
+				<button class="gnb__btn-account" title="회원가입" onclick="location.href='/user/join'"><i class="fa fa-user-plus gnb__icon--visible" aria-hidden="true"></i>회원가입</button>
+				<button class="gnb__btn-account" title="로그인" onclick="location.href='/user/login'"><i class="fa fa-sign-in gnb__icon--visible" aria-hidden="true"></i>로그인</button>
+			</sec:authorize>
+			<sec:authorize access="isAuthenticated()">
+				<button class="gnb__btn-account" title="로그아웃" onclick="location.href='/user/logout?${_csrf.parameterName}=${_csrf.token}'"><i class="fa fa-sign-out gnb__icon--visible" aria-hidden="true"></i>로그아웃</button>
+			</sec:authorize>
 		</div>
 		<ul class="gnb__nav-shortcut">
 			<li><a href="/"><i class="fa fa-bullhorn gnb__icon--visible" aria-hidden="true"></i>채용공고</a></li>

@@ -2,7 +2,7 @@ package com.canna.recruit.user.domain;
 
 import org.joda.time.DateTime;
 
-public class User {
+public abstract class User {
 	private String id;
 	private String password;
 	private String userName;
@@ -11,10 +11,6 @@ public class User {
 	private String tel;
 	private Authority authority;
 	private DateTime joinDate;
-	private String birthday;
-	private Gender gender;
-	private String companyName;
-	private String address;
 	
 	public String getCustomFormatTime() {
 		return joinDate.toString("yyyy-MM-dd HH:mm:ss");
@@ -84,36 +80,4 @@ public class User {
 		this.joinDate = joinDate;
 	}
 
-	public String getBirthday() {
-		return birthday;
-	}
-
-	public void setBirthday(String birthday) {
-		this.birthday = birthday;
-	}
-
-	public Gender getGender() {
-		return gender;
-	}
-
-	public void setGender(Gender gender) {
-		this.gender = gender;
-	}
-
-	public String getCompanyName() {
-		return companyName;
-	}
-
-	public void setCompanyName(String companyName) {
-		this.companyName = companyName;
-	}
-
-	public String getAddress() {
-		return address;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
-	
 }

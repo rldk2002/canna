@@ -3,11 +3,44 @@
   	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="UserDao">
-	<insert id="addPersonal" parameterType="User">
+	<insert id="insertPersonal" parameterType="Personal">
 		INSERT INTO 
 			User_Common(id, password, userName, nickName, email, tel, authority)
-				VALUES(#{id}, #{password}, #{userName}, #{nickName}, #{email}, #{tel}, #{authority.id})
-			
+				VALUES(#{id}, #{password}, #{userName}, #{nickName}, #{email}, #{tel}, #{authority.id})			
+		INSERT INTO
+			User_Personal(id, birthday, gender)
+				VALUES(#{id}, #{birthday}, #{gender.id})
 	</insert>
 	
+	<insert id="insertCompany" parameterType="Company">
+		INSERT INTO 
+			User_Common(id, password, userName, nickName, email, tel, authority)
+				VALUES(#{id}, #{password}, #{userName}, #{nickName}, #{email}, #{tel}, #{authority.id})			
+		INSERT INTO
+			User_Company(id, companyName, address)
+				VALUES(#{id}, #{companyName}, #{address})
+	</insert>
+	
+	<select id="selectPersonal" parameterType="String" resultType="Personal">
+		SELECT 
+			c.id, c.password, c.userName, c.nickName, c.email, c.tel, c.authority 
+		FROM User_Common AS c
+		INNER JOIN User_Personal AS p ON c.id = p.id
+		WHERE c.id = #{id}
+	</select>
+	
+	<select id="selectCompany" parameterType="String" resultType="Company">
+		SELECT 
+			c.id, c.password, c.userName, c.nickName, c.email, c.tel, c.authority 
+		FROM User_Common AS c
+		INNER JOIN User_Company AS p ON c.id = p.id
+		WHERE c.id = #{id}
+	</select>
+	
+	<select id="selectAuthority" parameterType="String" resultType="Authority">
+		SELECT
+			authority
+		FROM User_Common
+		WHERE id = #{id}
+	</select>
 </mapper>

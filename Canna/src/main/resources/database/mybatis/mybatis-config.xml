@@ -5,7 +5,8 @@
  
 <configuration>
 	<typeAliases>
-		<typeAlias type="com.canna.recruit.user.domain.User" alias="User"/>
+		<typeAlias type="com.canna.recruit.user.domain.Personal" alias="Personal"/>
+		<typeAlias type="com.canna.recruit.user.domain.Company" alias="Company"/>
 		<typeAlias type="com.canna.recruit.user.domain.Authority" alias="Authority"/>
 		<typeAlias type="com.canna.recruit.user.dao.UserDao" alias="UserDao"/>
 	</typeAliases>
