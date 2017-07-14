@@ -12,6 +12,7 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 import com.canna.recruit.security.LoginFailureHandler;
 import com.canna.recruit.security.LoginSuccessHandler;
+import com.canna.recruit.security.LogoutSuccessHandler;
 import com.canna.recruit.security.UserLoginService;
 
 @EnableWebSecurity
@@ -20,6 +21,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Autowired private UserLoginService userLoginService;
 	@Autowired private LoginSuccessHandler loginSuccessHandler;
 	@Autowired private LoginFailureHandler loginFailureHandler;
+	@Autowired private LogoutSuccessHandler louLogoutSuccessHandler;
+	
 	private BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
 	
 	@Override
@@ -45,7 +48,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 			.logout()
 				.logoutRequestMatcher(new AntPathRequestMatcher("/user/logout"))
 				.invalidateHttpSession(true)
-				.logoutSuccessUrl("/");
+				.logoutSuccessHandler(louLogoutSuccessHandler);
 	}
 
 	@Override
